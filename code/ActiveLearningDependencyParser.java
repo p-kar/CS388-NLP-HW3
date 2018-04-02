@@ -22,7 +22,7 @@ import java.io.PrintWriter;
 
 /**
  * This class is an active learning wrapper over the DependencyParser
- * developed by the Stanford CoreNLP group
+ * which is part of the Stanford CoreNLP group
  *
  * @author Pratyush Kar
  */
@@ -68,7 +68,7 @@ public class ActiveLearningDependencyParser {
         p.train(trainPath, null, modelPath, embeddingPath);
         	// Load a saved model
  		DependencyParser model = DependencyParser.loadFromModelFile(modelPath);
- 		// Test model on test data, write annotations to testAnnotationsPath
+ 		// Test model on test data
  		double las = model.testCoNLL(testPath, null);
  		// add epoch statistics to the list
  		stats.add(new ActiveLearningParserEpochStats(epochNum, numWords, las));
@@ -244,11 +244,6 @@ public class ActiveLearningDependencyParser {
         		maxNewLabels = Integer.parseInt(props.getProperty("maxNewLabels"));
 		}
         
-        if (oraclePolicy != "random" && oraclePolicy != "length" && oraclePolicy != "raw" && oraclePolicy != "margin") {
-        		System.out.println("Error: Active learning oracle policy should be one of - [random, length, raw, margin]");
-        		return;
-        }
-        
         System.out.println("############### ACTIVE LEARNING NEURAL DEPENDENCY PARSER ###############");
         System.out.println("CONFIGURATION:-");
         System.out.println("mode:                " + mode);
@@ -268,7 +263,6 @@ public class ActiveLearningDependencyParser {
         System.out.println("maxALEpochs:         " + maxALEpochs);
         System.out.println("maxNewLabels:        " + maxNewLabels);
         System.out.println();
-
         
         // initalize classifier properties
         Properties prop = new Properties();
@@ -371,6 +365,9 @@ public class ActiveLearningDependencyParser {
         				};
         				Collections.sort(rawUnlabelledTrees, cmp_margin);
         				break;
+        			default:
+        				System.out.println("Error: Oracle policy should be one of - [random, length, raw, margin]");
+        				return;
         		}
         		int idx = 0;
 			int numNewWords = 0;
@@ -386,7 +383,7 @@ public class ActiveLearningDependencyParser {
 			// update unlabelled data
 			writeConllFileRaw(unlabelledPath, rawUnlabelledTrees.subList(idx, rawUnlabelledTrees.size()));
         }
-        // write stats file with data
+        // write stats file with training stats
         writeStatsFile(statsFile, stats);
     }
 }
