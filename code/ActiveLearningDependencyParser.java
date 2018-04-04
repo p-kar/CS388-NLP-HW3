@@ -78,6 +78,8 @@ public class ActiveLearningDependencyParser {
  		return predictedParses;
 	}
 	
+	// reads the Conll file in raw text format
+	// restructured Util.loadConllFile function
 	public static void loadConllFileRaw(String inFile, List<RawTextTree> rawTrees,
 			boolean unlabeled, boolean cPOS)
 	  {
@@ -133,6 +135,8 @@ public class ActiveLearningDependencyParser {
 	    }
 	  }
 	
+	// write Conll file to disk
+	// restructured Util.writeConllFile function
 	public static void writeConllFileRaw(String outFile, List<RawTextTree> rtrees) {
 		try {
 	      PrintWriter output = IOUtils.getPrintWriter(outFile);
@@ -334,7 +338,7 @@ public class ActiveLearningDependencyParser {
         				// sentences with maximum raw uncertainity chosen for the next epoch
         				for (int j = 0; j < predictedParses.size(); ++j) {
         					RawTextTree tree = rawUnlabelledTrees.get(j);
-        					tree.setScore(predictedParses.get(j).RawScore);
+        					tree.setScore(predictedParses.get(j).RawScore / (2.0 * tree.getNumWords()));
         				}
         				Comparator<RawTextTree> cmp_raw = new Comparator<RawTextTree>() {
         					public int compare(RawTextTree t1, RawTextTree t2) {
@@ -352,7 +356,7 @@ public class ActiveLearningDependencyParser {
         				// sentences with maximum raw uncertainity chosen for the next epoch
         				for (int j = 0; j < predictedParses.size(); ++j) {
         					RawTextTree tree = rawUnlabelledTrees.get(j);
-        					tree.setScore(predictedParses.get(j).MarginScore);
+        					tree.setScore(predictedParses.get(j).MarginScore / (2.0 * tree.getNumWords()));
         				}
         				Comparator<RawTextTree> cmp_margin = new Comparator<RawTextTree>() {
         					public int compare(RawTextTree t1, RawTextTree t2) {
