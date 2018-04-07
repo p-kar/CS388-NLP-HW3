@@ -72,7 +72,7 @@ public class ActiveLearningDependencyParser {
         DependencyParser model = DependencyParser.loadFromModelFile(modelPath);
         // Test model on test data
         double las = model.testCoNLL(testPath, null);
-        System.out.printf("LAS: %.2f", las);
+        System.out.printf("LAS: %.2f\n", las);
         // add epoch statistics to the list
         stats.add(new ActiveLearningParserEpochStats(epochNum, numWords, las));
         // returns parse trees for all the sentences in test data using model

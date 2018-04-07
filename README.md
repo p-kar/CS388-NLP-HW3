@@ -32,8 +32,6 @@ java -cp .:stanford-corenlp.jar ActiveLearningDependencyParser \
 -statsFile outputs/stats_random.csv \
 -embeddingPath data/en-cw.txt \
 -tmpDirPath tmp_random/ \
--labelledPath tmp_random/labelled.conllx \
--unlabelledPath tmp_random/unlabelled.conllx \
 -seedSetSize 50 \
 -maxIter 25 \
 -maxALEpochs 100 \
