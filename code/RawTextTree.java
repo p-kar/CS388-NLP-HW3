@@ -8,35 +8,35 @@ import java.util.List;
  * @author Pratyush Kar
  */
 public class RawTextTree {
-	private List<String> branches;
-	private double score;
-	
-	public RawTextTree() { 
-		branches = new ArrayList<String>();
-		score = 0.0;
-	}
-	
-	public void setScore(double score) {
-		this.score = score;
-	}
-	
-	public double getScore() {
-		return score;
-	}
-	
-	public void add(String b) {
-		branches.add(b);
-	}
-	
-	public int getNumWords() {
-		return branches.size();
-	}
-	
-	public String toString() {
-		String ret = "";
-		for (String l: branches) {
-			ret += l + "\n";
-		}
-		return ret;
-	}	
+    private List<String> branches;
+    private double score;
+    
+    public RawTextTree() { 
+        branches = new ArrayList<String>();
+        score = 0.0;
+    }
+    
+    public void setScore(double score) {
+        this.score = score;
+    }
+    
+    public double getScore() {
+        return score;
+    }
+    
+    public void add(String b) {
+        branches.add(b);
+    }
+    
+    public int getNumWords() {
+        return branches.size();
+    }
+    
+    public String toString() {
+        String ret = "";
+        for (String l: branches) {
+            ret += l + "\n";
+        }
+        return ret;
+    }   
 }
