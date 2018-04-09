@@ -1,0 +1,141 @@
+############### ACTIVE LEARNING NEURAL DEPENDENCY PARSER ###############
+CONFIGURATION:-
+mode:                train
+seedPath:            data/wsj_00.conllx
+trainPath:           data/wsj_01_03.conllx
+testPath:            data/wsj_20.conllx
+oraclePolicy:        raw
+modelPath:           outputs/model_raw.model
+statsFile:           outputs/stats_raw.csv
+embeddingPath:       data/en-cw.txt
+testAnnotationsPath: outputs/test_annotation.conllx
+tmpDirPath:          tmp_raw/
+labelledPath:        tmp_raw/labelled.conllx
+unlabelledPath:      tmp_raw/unlabelled.conllx
+seedSetSize:         50
+maxIter:             500
+maxALEpochs:         20
+maxNewLabels:        1500
+
+tmp directory exists. Deleting directory... done
+tmp directory was created successfully
+
+############### EPOCH 0 ################
+Num. training words: 1179
+LAS: 45.27
+Labelled Trees:50
+Unlabelled Trees:4485
+
+############### EPOCH 1 ################
+Num. training words: 2680
+LAS: 62.12
+Labelled Trees:161
+Unlabelled Trees:4374
+
+############### EPOCH 2 ################
+Num. training words: 4180
+LAS: 68.31
+Labelled Trees:240
+Unlabelled Trees:4295
+
+############### EPOCH 3 ################
+Num. training words: 5698
+LAS: 72.24
+Labelled Trees:333
+Unlabelled Trees:4202
+
+############### EPOCH 4 ################
+Num. training words: 7224
+LAS: 74.04
+Labelled Trees:415
+Unlabelled Trees:4120
+
+############### EPOCH 5 ################
+Num. training words: 8748
+LAS: 75.66
+Labelled Trees:499
+Unlabelled Trees:4036
+
+############### EPOCH 6 ################
+Num. training words: 10254
+LAS: 76.21
+Labelled Trees:580
+Unlabelled Trees:3955
+
+############### EPOCH 7 ################
+Num. training words: 11768
+LAS: 77.50
+Labelled Trees:650
+Unlabelled Trees:3885
+
+############### EPOCH 8 ################
+Num. training words: 13276
+LAS: 78.66
+Labelled Trees:728
+Unlabelled Trees:3807
+
+############### EPOCH 9 ################
+Num. training words: 14800
+LAS: 79.60
+Labelled Trees:799
+Unlabelled Trees:3736
+
+############### EPOCH 10 ################
+Num. training words: 16322
+LAS: 80.06
+Labelled Trees:871
+Unlabelled Trees:3664
+
+############### EPOCH 11 ################
+Num. training words: 17826
+LAS: 80.30
+Labelled Trees:943
+Unlabelled Trees:3592
+
+############### EPOCH 12 ################
+Num. training words: 19339
+LAS: 80.79
+Labelled Trees:1000
+Unlabelled Trees:3535
+
+############### EPOCH 13 ################
+Num. training words: 20852
+LAS: 80.89
+Labelled Trees:1062
+Unlabelled Trees:3473
+
+############### EPOCH 14 ################
+Num. training words: 22356
+LAS: 81.52
+Labelled Trees:1125
+Unlabelled Trees:3410
+
+############### EPOCH 15 ################
+Num. training words: 23862
+LAS: 81.44
+Labelled Trees:1190
+Unlabelled Trees:3345
+
+############### EPOCH 16 ################
+Num. training words: 25362
+LAS: 81.52
+Labelled Trees:1259
+Unlabelled Trees:3276
+
+############### EPOCH 17 ################
+Num. training words: 26887
+LAS: 82.00
+Labelled Trees:1323
+Unlabelled Trees:3212
+
+############### EPOCH 18 ################
+Num. training words: 28395
+LAS: 81.50
+Labelled Trees:1386
+Unlabelled Trees:3149
+
+############### EPOCH 19 ################
+Num. training words: 29920
+LAS: 81.74
+Labelled Trees:1446
+Unlabelled Trees:3089

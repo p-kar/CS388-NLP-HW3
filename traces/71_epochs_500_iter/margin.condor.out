@@ -1,0 +1,453 @@
+############### ACTIVE LEARNING NEURAL DEPENDENCY PARSER ###############
+CONFIGURATION:-
+mode:                train
+seedPath:            data/wsj_00.conllx
+trainPath:           data/wsj_01_03.conllx
+testPath:            data/wsj_20.conllx
+oraclePolicy:        margin
+modelPath:           outputs/model_margin.model
+statsFile:           outputs/stats_margin.csv
+embeddingPath:       data/en-cw.txt
+testAnnotationsPath: outputs/test_annotation.conllx
+tmpDirPath:          tmp_margin/
+labelledPath:        tmp_margin/labelled.conllx
+unlabelledPath:      tmp_margin/unlabelled.conllx
+seedSetSize:         50
+maxIter:             100
+maxALEpochs:         100
+maxNewLabels:        1500
+
+tmp directory exists. Deleting directory... done
+tmp directory was created successfully
+
+############### EPOCH 0 ################
+Num. training words: 1179
+LAS: 31.39
+Labelled Trees:50
+Unlabelled Trees:4485
+
+############### EPOCH 1 ################
+Num. training words: 2694
+LAS: 51.24
+Labelled Trees:136
+Unlabelled Trees:4399
+
+############### EPOCH 2 ################
+Num. training words: 4195
+LAS: 58.83
+Labelled Trees:223
+Unlabelled Trees:4312
+
+############### EPOCH 3 ################
+Num. training words: 5709
+LAS: 62.39
+Labelled Trees:313
+Unlabelled Trees:4222
+
+############### EPOCH 4 ################
+Num. training words: 7223
+LAS: 62.78
+Labelled Trees:388
+Unlabelled Trees:4147
+
+############### EPOCH 5 ################
+Num. training words: 8728
+LAS: 65.48
+Labelled Trees:464
+Unlabelled Trees:4071
+
+############### EPOCH 6 ################
+Num. training words: 10249
+LAS: 66.78
+Labelled Trees:542
+Unlabelled Trees:3993
+
+############### EPOCH 7 ################
+Num. training words: 11763
+LAS: 66.82
+Labelled Trees:619
+Unlabelled Trees:3916
+
+############### EPOCH 8 ################
+Num. training words: 13277
+LAS: 67.82
+Labelled Trees:693
+Unlabelled Trees:3842
+
+############### EPOCH 9 ################
+Num. training words: 14782
+LAS: 69.29
+Labelled Trees:774
+Unlabelled Trees:3761
+
+############### EPOCH 10 ################
+Num. training words: 16321
+LAS: 69.20
+Labelled Trees:842
+Unlabelled Trees:3693
+
+############### EPOCH 11 ################
+Num. training words: 17845
+LAS: 71.07
+Labelled Trees:914
+Unlabelled Trees:3621
+
+############### EPOCH 12 ################
+Num. training words: 19356
+LAS: 69.85
+Labelled Trees:975
+Unlabelled Trees:3560
+
+############### EPOCH 13 ################
+Num. training words: 20878
+LAS: 69.74
+Labelled Trees:1045
+Unlabelled Trees:3490
+
+############### EPOCH 14 ################
+Num. training words: 22389
+LAS: 69.23
+Labelled Trees:1113
+Unlabelled Trees:3422
+
+############### EPOCH 15 ################
+Num. training words: 23889
+LAS: 72.08
+Labelled Trees:1179
+Unlabelled Trees:3356
+
+############### EPOCH 16 ################
+Num. training words: 25409
+LAS: 71.47
+Labelled Trees:1248
+Unlabelled Trees:3287
+
+############### EPOCH 17 ################
+Num. training words: 26925
+LAS: 71.56
+Labelled Trees:1319
+Unlabelled Trees:3216
+
+############### EPOCH 18 ################
+Num. training words: 28435
+LAS: 72.27
+Labelled Trees:1383
+Unlabelled Trees:3152
+
+############### EPOCH 19 ################
+Num. training words: 29946
+LAS: 72.12
+Labelled Trees:1442
+Unlabelled Trees:3093
+
+############### EPOCH 20 ################
+Num. training words: 31464
+LAS: 72.85
+Labelled Trees:1515
+Unlabelled Trees:3020
+
+############### EPOCH 21 ################
+Num. training words: 33001
+LAS: 72.81
+Labelled Trees:1580
+Unlabelled Trees:2955
+
+############### EPOCH 22 ################
+Num. training words: 34508
+LAS: 71.32
+Labelled Trees:1635
+Unlabelled Trees:2900
+
+############### EPOCH 23 ################
+Num. training words: 36018
+LAS: 71.75
+Labelled Trees:1703
+Unlabelled Trees:2832
+
+############### EPOCH 24 ################
+Num. training words: 37531
+LAS: 73.50
+Labelled Trees:1761
+Unlabelled Trees:2774
+
+############### EPOCH 25 ################
+Num. training words: 39056
+LAS: 71.91
+Labelled Trees:1827
+Unlabelled Trees:2708
+
+############### EPOCH 26 ################
+Num. training words: 40579
+LAS: 73.58
+Labelled Trees:1885
+Unlabelled Trees:2650
+
+############### EPOCH 27 ################
+Num. training words: 42117
+LAS: 71.79
+Labelled Trees:1943
+Unlabelled Trees:2592
+
+############### EPOCH 28 ################
+Num. training words: 43627
+LAS: 73.04
+Labelled Trees:1999
+Unlabelled Trees:2536
+
+############### EPOCH 29 ################
+Num. training words: 45140
+LAS: 71.09
+Labelled Trees:2059
+Unlabelled Trees:2476
+
+############### EPOCH 30 ################
+Num. training words: 46663
+LAS: 73.58
+Labelled Trees:2120
+Unlabelled Trees:2415
+
+############### EPOCH 31 ################
+Num. training words: 48179
+LAS: 73.77
+Labelled Trees:2181
+Unlabelled Trees:2354
+
+############### EPOCH 32 ################
+Num. training words: 49685
+LAS: 70.38
+Labelled Trees:2242
+Unlabelled Trees:2293
+
+############### EPOCH 33 ################
+Num. training words: 51196
+LAS: 73.25
+Labelled Trees:2294
+Unlabelled Trees:2241
+
+############### EPOCH 34 ################
+Num. training words: 52696
+LAS: 73.14
+Labelled Trees:2354
+Unlabelled Trees:2181
+
+############### EPOCH 35 ################
+Num. training words: 54203
+LAS: 71.83
+Labelled Trees:2413
+Unlabelled Trees:2122
+
+############### EPOCH 36 ################
+Num. training words: 55728
+LAS: 73.08
+Labelled Trees:2474
+Unlabelled Trees:2061
+
+############### EPOCH 37 ################
+Num. training words: 57228
+LAS: 72.26
+Labelled Trees:2530
+Unlabelled Trees:2005
+
+############### EPOCH 38 ################
+Num. training words: 58743
+LAS: 72.33
+Labelled Trees:2590
+Unlabelled Trees:1945
+
+############### EPOCH 39 ################
+Num. training words: 60277
+LAS: 71.61
+Labelled Trees:2641
+Unlabelled Trees:1894
+
+############### EPOCH 40 ################
+Num. training words: 61787
+LAS: 74.01
+Labelled Trees:2698
+Unlabelled Trees:1837
+
+############### EPOCH 41 ################
+Num. training words: 63297
+LAS: 72.39
+Labelled Trees:2751
+Unlabelled Trees:1784
+
+############### EPOCH 42 ################
+Num. training words: 64800
+LAS: 73.22
+Labelled Trees:2807
+Unlabelled Trees:1728
+
+############### EPOCH 43 ################
+Num. training words: 66333
+LAS: 73.07
+Labelled Trees:2865
+Unlabelled Trees:1670
+
+############### EPOCH 44 ################
+Num. training words: 67849
+LAS: 73.65
+Labelled Trees:2921
+Unlabelled Trees:1614
+
+############### EPOCH 45 ################
+Num. training words: 69388
+LAS: 73.22
+Labelled Trees:2983
+Unlabelled Trees:1552
+
+############### EPOCH 46 ################
+Num. training words: 70912
+LAS: 72.36
+Labelled Trees:3036
+Unlabelled Trees:1499
+
+############### EPOCH 47 ################
+Num. training words: 72414
+LAS: 73.61
+Labelled Trees:3095
+Unlabelled Trees:1440
+
+############### EPOCH 48 ################
+Num. training words: 73918
+LAS: 73.55
+Labelled Trees:3148
+Unlabelled Trees:1387
+
+############### EPOCH 49 ################
+Num. training words: 75421
+LAS: 72.63
+Labelled Trees:3200
+Unlabelled Trees:1335
+
+############### EPOCH 50 ################
+Num. training words: 76948
+LAS: 72.75
+Labelled Trees:3250
+Unlabelled Trees:1285
+
+############### EPOCH 51 ################
+Num. training words: 78458
+LAS: 72.12
+Labelled Trees:3303
+Unlabelled Trees:1232
+
+############### EPOCH 52 ################
+Num. training words: 79979
+LAS: 74.25
+Labelled Trees:3357
+Unlabelled Trees:1178
+
+############### EPOCH 53 ################
+Num. training words: 81489
+LAS: 72.89
+Labelled Trees:3412
+Unlabelled Trees:1123
+
+############### EPOCH 54 ################
+Num. training words: 82991
+LAS: 74.06
+Labelled Trees:3470
+Unlabelled Trees:1065
+
+############### EPOCH 55 ################
+Num. training words: 84504
+LAS: 73.44
+Labelled Trees:3522
+Unlabelled Trees:1013
+
+############### EPOCH 56 ################
+Num. training words: 86033
+LAS: 72.79
+Labelled Trees:3573
+Unlabelled Trees:962
+
+############### EPOCH 57 ################
+Num. training words: 87569
+LAS: 73.55
+Labelled Trees:3630
+Unlabelled Trees:905
+
+############### EPOCH 58 ################
+Num. training words: 89070
+LAS: 73.94
+Labelled Trees:3686
+Unlabelled Trees:849
+
+############### EPOCH 59 ################
+Num. training words: 90617
+LAS: 73.01
+Labelled Trees:3735
+Unlabelled Trees:800
+
+############### EPOCH 60 ################
+Num. training words: 92118
+LAS: 72.99
+Labelled Trees:3791
+Unlabelled Trees:744
+
+############### EPOCH 61 ################
+Num. training words: 93627
+LAS: 73.14
+Labelled Trees:3842
+Unlabelled Trees:693
+
+############### EPOCH 62 ################
+Num. training words: 95133
+LAS: 73.24
+Labelled Trees:3897
+Unlabelled Trees:638
+
+############### EPOCH 63 ################
+Num. training words: 96637
+LAS: 74.23
+Labelled Trees:3955
+Unlabelled Trees:580
+
+############### EPOCH 64 ################
+Num. training words: 98158
+LAS: 73.36
+Labelled Trees:4014
+Unlabelled Trees:521
+
+############### EPOCH 65 ################
+Num. training words: 99678
+LAS: 74.14
+Labelled Trees:4073
+Unlabelled Trees:462
+
+############### EPOCH 66 ################
+Num. training words: 101185
+LAS: 72.54
+Labelled Trees:4131
+Unlabelled Trees:404
+
+############### EPOCH 67 ################
+Num. training words: 102685
+LAS: 72.83
+Labelled Trees:4190
+Unlabelled Trees:345
+
+############### EPOCH 68 ################
+Num. training words: 104214
+LAS: 73.36
+Labelled Trees:4258
+Unlabelled Trees:277
+
+############### EPOCH 69 ################
+Num. training words: 105737
+LAS: 73.53
+Labelled Trees:4324
+Unlabelled Trees:211
+
+############### EPOCH 70 ################
+Num. training words: 107244
+LAS: 72.44
+Labelled Trees:4411
+Unlabelled Trees:124
+
+############### EPOCH 71 ################
+Num. training words: 108451
+LAS: 73.59
+Labelled Trees:4535
+Unlabelled Trees:0

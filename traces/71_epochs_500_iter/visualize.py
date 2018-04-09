@@ -33,9 +33,6 @@ for f, c in zip(files, colors):
 
     x_sm = np.array(x)
     y_sm = np.array(y)
-
-    # x_smooth = np.linspace(x_sm.min(), x_sm.max(), 200)
-    # y_smooth = spline(x, y, x_smooth)
     y_smooth = savgol_filter(y, 9, 3)
 
     # ax.plot(x_sm, y_smooth, c, linewidth=1, label=f[6:-4])
@@ -44,7 +41,7 @@ for f, c in zip(files, colors):
 
 ax.set_xticklabels(labels)
 ax.legend()
-# plt.title('Active Learning for Neural Dependency Parsing (Smoothed)')
+plt.title('ALDP - 71 Epochs, 100 Iterations per Epoch')
 plt.xlabel('Number of training words')
 plt.ylabel('Label Attachment Score (LAS)')
 plt.show()

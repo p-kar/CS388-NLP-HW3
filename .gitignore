@@ -1,0 +1,18 @@
+# Compiled class file
+*.class
+
+# Ignore directory
+code/data/
+code/tmp/
+code/tmp_random/
+code/tmp_length/
+code/tmp_raw/
+code/tmp_margin
+code/outputs
+
+code/.classpath
+code/.gitignore
+code/.project
+plots/.DS_Store
+code/.DS_Store
+.DS_Store
