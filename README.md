@@ -28,7 +28,7 @@ javac -cp .:stanford-corenlp.jar ActiveLearningDependencyParser.java
 ### Arguments
 
 |     Argument    |                                      Summary                                     |
-|:---------------:|----------------------------------------------------------------------------------|
+|:---------------:|:--------------------------------------------------------------------------------:|
 |    `seedPath`   | path to the seed set                                                             |
 |   `trainPath`   | path to the training set                                                         |
 |    `testPath`   | path to the test set                                                             |
@@ -42,7 +42,7 @@ javac -cp .:stanford-corenlp.jar ActiveLearningDependencyParser.java
 |  `maxALEpochs`  | max number of active learning epochs (default: 100)                              |
 |  `maxNewLabels` | max number of labelled words added in each epoch (default: 1500)                 |
 
-### Running the models
+### Training the models
 
 ~~~~
 java -cp .:stanford-corenlp.jar ActiveLearningDependencyParser \
